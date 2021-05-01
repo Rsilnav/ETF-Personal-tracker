@@ -15,12 +15,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { SettingsComponent } from './settings/settings.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatTableModule } from '@angular/material/table';
+import { ReactiveFormsModule } from '@angular/forms';
+import { EtfService } from './etf.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     DashboardComponent,
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,8 +43,13 @@ import { NavigationComponent } from './navigation/navigation.component';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule,
+    ReactiveFormsModule,
+    MatTableModule,
   ],
-  providers: [],
+  providers: [EtfService],
   bootstrap: [AppComponent],
 })
 export class AppModule {
