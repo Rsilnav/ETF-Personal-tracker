@@ -14,8 +14,6 @@ export class EtfService {
 
   addEtf(etf: Etf) : void {
     this.etfs.push(etf);
-    // TODO: [ETF-5] Remove console calls
-    console.warn(this.etfs);
   }
 
   getEtfs(): Etf[] {
